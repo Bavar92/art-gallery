@@ -25,6 +25,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'HeroldC';
+  src: url('../fonts/HeroldC.woff2') format('woff2'),
+  url('../fonts/HeroldC.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 //Using @include declare-font('FontName', 'font-filename');
 @mixin declare-font($font-family, $font-filename, $font-weight: normal, $font-style: normal) {
