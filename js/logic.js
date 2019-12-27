@@ -28,9 +28,9 @@ $(document).ready(function () {
     });
 
     if (!$(".woocommerce-checkout")[0]) {
-        $('select').selectric({
-            disableOnMobile: false
-        });
+        // $('select').selectric({
+        //     disableOnMobile: false
+        // });
         $(".wpcf7-form select option:first-of-type").attr('selected', 'true').attr('disabled', 'disabled').attr('value', '0');
     }
 
