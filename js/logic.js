@@ -59,32 +59,15 @@ $(document).ready(function () {
 
 });
 
-// $(window).on('load', function () {
-//     if ($("").length > 0) {
-//         var swiper = new Swiper("", {
-//             loop: true,
-//             spaceBetween: 30,
-//             autoplay: {
-//                 delay: 5000
-//             },
-//             breakpoints: {
-//                 768: {
-//                     slidesPerView: 1,
-//                     spaceBetween: 10
-//                 },
-//                 880: {
-//                     slidesPerView: 2,
-//                     spaceBetween: 20
-//                 },
-//                 1024: {
-//                     slidesPerView: 3,
-//                     spaceBetween: 30
-//                 }
-//             },
-//             navigation: {
-//                 nextEl: '.fa-angle-right',
-//                 prevEl: '.fa-angle-left'
-//             }
-//         });
-//     }
-// });
+$(window).on('load', function () {
+    if ($(".homeSlider").length > 0) {
+        var swiper = new Swiper('.homeSlider', {
+            direction: 'vertical',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+    }
+});
+

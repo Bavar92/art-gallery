@@ -19,11 +19,15 @@ header('X-UA-Compatible: IE=Edge');
 <body <?php body_class(); ?>>
 <div id="main">
     <header>
-        <div class="container">
+        <div class="container alc">
             <?php echo get_custom_logo(); ?>
             <div id="menuOpen"><p>Menu</p><span></span></div>
             <nav id="mainMenu">
                 <?php wp_nav_menu(array('container' => false, 'items_wrap' => '<ul id="%1$s">%3$s</ul>', 'theme_location' => 'main_menu')); ?>
             </nav>
+            <div class="language">
+                <span class="ua"></span>
+                <span class="ru"></span>
+            </div>
         </div>
     </header>
