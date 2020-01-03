@@ -47,15 +47,7 @@ $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
                     <?php } ?>
                 </div>
             </div>
-            <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&language=en&key=AIzaSyADCYn5c_s4xWt0WpHAWN7p0VtOyz-QZsk" type="text/javascript"></script>
-
-            <?php
-            $location = get_field('map_s');
-            if( $location ): ?>
-                <div class="acf-map" data-zoom="13">
-                    <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"  data-img="<?php echo theme() ?>/images/map.png" ></div>
-                </div>
-            <?php endif; ?>
+            <div style="overflow:hidden;width: 100%;position: relative;"><iframe width="100%" height="300" src="https://maps.google.com/maps?width=700&amp;height=300&amp;hl=en&amp;q=Kiev+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=12&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/en/">embedgooglemaps EN</a> & <a href="https://iamsterdamcard.it">http://iamsterdamcard.it/</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
         </div>
     </section>
 <?php get_footer(); ?>

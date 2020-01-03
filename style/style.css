@@ -3552,6 +3552,52 @@ header {
 .acf-map {
   height: 300px; }
 
+.footer {
+  background-color: #441716;
+  color: #fff;
+  position: relative;
+  padding: 28px 0; }
+  .footer h4 {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Calibri";
+    color: #BDBDBD;
+    padding-bottom: 8px; }
+  .footer .phoneBox a {
+    color: #FCFCFC;
+    font-size: 18px;
+    line-height: 22px; }
+  .footer .phoneBox span {
+    display: inline-block;
+    margin: 0 10px 0 12px; }
+  .footer .centerFooter {
+    position: relative; }
+    .footer .centerFooter .custom-logo-link {
+      position: absolute;
+      -webkit-transform: translate(-50%, -90%);
+      -moz-transform: translate(-50%, -90%);
+      -ms-transform: translate(-50%, -90%);
+      -o-transform: translate(-50%, -90%);
+      transform: translate(-50%, -90%);
+      left: 50%;
+      top: 0; }
+  .footer .some a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    background: #7B2F2E;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 12px;
+    color: #fff;
+    text-decoration: none; }
+    .footer .some a:nth-child(2) {
+      position: relative;
+      top: 26px; }
+    .footer .some a:hover {
+      opacity: .8; }
+
 @media screen and (max-width: 1024px) {
   html {
     font-size: 14px; }

@@ -114,7 +114,7 @@ header {
   #mainMenu {
     > ul {
       font-size: 0;
-      >li.menu-item-has-children {
+      > li.menu-item-has-children {
         padding-right: 30px;
         position: relative;
         &:after {
@@ -213,11 +213,12 @@ header {
 .home header, .single-news_and_events header {
   background: rgba(51, 14, 14, 0.6);
 }
+
 .home #pusher, .single-news_and_events #pusher {
   display: none;
 }
 
-.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-container-vertical>.swiper-pagination-progressbar {
+.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-container-vertical > .swiper-pagination-progressbar {
   left: auto;
   right: 0;
   background: rgba(255, 255, 255, 0.2);
@@ -241,15 +242,11 @@ header {
   }
 }
 
-
 .sliderVertical {
   height: calc(100vh);
   padding-top: 92px;
   padding-right: 29px;
 }
-
-
-
 
 .homeSlider {
   margin-left: auto;
@@ -341,7 +338,6 @@ header {
   }
 }
 
-
 .content {
   padding: 50px 0 115px;
 }
@@ -418,6 +414,57 @@ header {
   height: 300px;
 }
 
-footer {
-
+.footer {
+  background-color: $bg3;
+  color: #fff;
+  position: relative;
+  padding: 28px 0;
+  h4 {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $f;
+    color: #BDBDBD;
+    padding-bottom: 8px;
+  }
+  .phoneBox {
+    a {
+      color: #FCFCFC;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    span {
+      display: inline-block;
+      margin: 0 10px 0 12px;
+    }
+  }
+  .centerFooter {
+    position: relative;
+    .custom-logo-link {
+      position: absolute;
+      @include transform(translate(-50%, -90%));
+      left: 50%;
+      top: 0;
+    }
+  }
+  .some {
+    a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      background: #7B2F2E;
+      text-align: center;
+      border-radius: 50%;
+      margin: 0 12px;
+      color: #fff;
+      text-decoration: none;
+      &:nth-child(2) {
+        position: relative;
+        top: 26px;
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
 }

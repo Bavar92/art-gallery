@@ -25,12 +25,12 @@ function content_button($atts,$content = null){
 add_shortcode("button", "content_button");
 
 function some() {
-    $some = get_field('some', 'option');
+    $some = get_field('social', 'option');
     $soc = '';
     if($some) {
         $soc .= '<div class="some">';
         foreach($some as $sm) {
-            $soc .= '<a class="fas fa-'.$sm['icon'].'" target="_blank" href="'.$sm['link'].'" rel="nofollow"></a>';
+            $soc .= '<a class="fab fa-'.$sm['icon'].'" target="_blank" href="'.$sm['link'].'" rel="nofollow"></a>';
         }
         $soc .= '</div>';
     }
