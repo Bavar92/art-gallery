@@ -14,6 +14,25 @@ $(document).ready(function () {
         });
     }
 
+    if (width >= 1025) {
+        var c, currentScrollTop = 0,
+            navbar = $('header');
+
+        $(window).scroll(function () {
+            var a = $(window).scrollTop();
+            var b = navbar.height();
+
+            currentScrollTop = a;
+
+            if (c < currentScrollTop && a > b + b) {
+                navbar.addClass("scrollUp");
+            } else if (c > currentScrollTop && !(a <= b)) {
+                navbar.removeClass("scrollUp");
+            }
+            c = currentScrollTop;
+        });
+    }
+
 
     //WPCF7
     $(this).on('click', '.wpcf7-not-valid-tip', function () {
@@ -34,28 +53,11 @@ $(document).ready(function () {
         $(".wpcf7-form select option:first-of-type").attr('selected', 'true').attr('disabled', 'disabled').attr('value', '0');
     }
 
-    //WOOOOOOOO
-
-    /*initQuantityInput();
-    $('body').on('click', '.minus', function (e) {
-        var val = parseInt($(this).parent().find('input').val());
-        if (val !== 0) {
-            $(this).parent().find('input').val(val - 1).change();
-        }
+    $('p').each(function () {
+        var $this = $(this);
+        if ($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+            $this.remove();
     });
-    $('body').on('click', '.plus', function (e) {
-        var val = parseInt($(this).parent().find('input').val());
-        $(this).parent().find('input').val(val + 1).change();
-
-    });
-    $(document.body).on('updated_cart_totals', function () {
-        initQuantityInput();
-    });
-
-    function initQuantityInput() {
-        $("form .quantity").prepend('<div class="minus qControls">-</div>');
-        $("form .quantity").append('<div class="plus qControls">+</div>');
-    }*/
 
 });
 
@@ -63,8 +65,13 @@ $(window).on('load', function () {
     if ($(".homeSlider").length > 0) {
         var swiper = new Swiper('.homeSlider', {
             direction: 'vertical',
+            slidesPerView: 3,
+            spaceBetween: 24,
+            mousewheel: true,
             pagination: {
                 el: '.swiper-pagination',
+                type: 'progressbar',
+
                 clickable: true
             }
         });

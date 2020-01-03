@@ -1,4 +1,4 @@
-в/* ==========================================================================
+/* ==========================================================================
  swiper source
  https://raw.githubusercontent.com/nolimits4web/Swiper/master/dist/js/swiper.min.js
  Fancybox source

@@ -3,7 +3,7 @@
 
 function my_acf_init()
 {
-    acf_update_setting('google_api_key', 'AIzaSyAOfuigGs3rWzZsdcWmQTeGU82RGccVqfc');
+    acf_update_setting('google_api_key', 'AIzaSyADCYn5c_s4xWt0WpHAWN7p0VtOyz-QZsk');
 }
 
 add_action('acf/init', 'my_acf_init');
@@ -11,7 +11,7 @@ add_action('acf/init', 'my_acf_init');
 function style_js()
 {
     if (is_page_template("tpl-contact.php") || is_front_page()) {
-        wp_enqueue_script('gmap', "//maps.googleapis.com/maps/api/js?v=3.exp&language=en&key=AIzaSyAOfuigGs3rWzZsdcWmQTeGU82RGccVqfc", '', null);
+        wp_enqueue_script('gmap', "//maps.googleapis.com/maps/api/js?v=3.exp&language=en&key=AIzaSyADCYn5c_s4xWt0WpHAWN7p0VtOyz-QZsk", '', null);
     }
     if (!is_admin()) {
         wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', array('jquery'), '1.0', true);
