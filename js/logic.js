@@ -76,7 +76,11 @@ $(document).ready(function () {
         }
     });
 
-
+    $('.grid').masonry({
+        columnWidth: 592,
+        gutter: 32,
+        itemSelector: '.grid-item'
+    });
 });
 
 $(window).on('load', function () {

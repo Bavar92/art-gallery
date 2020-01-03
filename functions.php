@@ -6,6 +6,7 @@ require_once 'include/cpt.php';
 //images sizes
 add_image_size( 'free', '1920', '', true );
 add_image_size( 'job', '220', '220', true );
+add_image_size( 'event', '592', '320', true );
 
 //light function fo wp_get_attachment_image_src()
 function image_src($id, $size = 'full', $background_image = false, $height = false) {
