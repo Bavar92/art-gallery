@@ -10,13 +10,12 @@ add_action('acf/init', 'my_acf_init');
 
 function style_js()
 {
-    if (is_page_template("tpl-contact.php") || is_front_page()) {
-        wp_enqueue_script('gmap', "//maps.googleapis.com/maps/api/js?v=3.exp&language=en&key=AIzaSyADCYn5c_s4xWt0WpHAWN7p0VtOyz-QZsk", '', null);
-    }
+
     if (!is_admin()) {
         wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', array('jquery'), '1.0', true);
     };
     wp_enqueue_script('lib', get_template_directory_uri() . '/js/lib.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('map', get_template_directory_uri() . '/js/map.js', array('jquery'), '1.0', true);
     wp_enqueue_script('logic', get_template_directory_uri() . '/js/logic.js', array('jquery'), '1.0', true);
     wp_enqueue_style('outer', get_template_directory_uri() . '/style/lib.css');
     wp_enqueue_style('style', get_template_directory_uri() . '/style/style.css');

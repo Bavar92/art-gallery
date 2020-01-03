@@ -453,8 +453,9 @@ textarea {
   display: inline-block;
   line-height: 2.5rem;
   padding: 0 1.25rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   background: #612524;
+  min-width: 125px;
   color: #fff;
   font-family: "Calibri";
   text-align: center;
@@ -3168,7 +3169,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "HeroldC"; }
 
 h1 {
-  font-size: 60px; }
+  font-size: 60px;
+  line-height: 66px;
+  letter-spacing: 0.03em; }
+
+h2 {
+  font-size: 30px;
+  line-height: 29px;
+  color: #7B2F2E;
+  font-weight: 700;
+  font-family: "Calibri";
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 35px; }
+  h2:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #7B2F2E;
+    width: 100px;
+    height: 1px; }
 
 p {
   padding-bottom: 20px;
@@ -3327,10 +3348,10 @@ header {
       top: 0.9375rem;
       left: 0; }
 
-.home header {
+.home header, .single-news_and_events header {
   background: rgba(51, 14, 14, 0.6); }
 
-.home #pusher {
+.home #pusher, .single-news_and_events #pusher {
   display: none; }
 
 .swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-container-vertical > .swiper-pagination-progressbar {
@@ -3420,6 +3441,116 @@ header {
           font-size: 16px;
           line-height: 20px;
           color: #393636; }
+
+.topBox {
+  min-height: 560px;
+  position: relative;
+  text-align: center; }
+  .topBox:before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: radial-gradient(59.88% 51.38% at 48.06% 48.62%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%); }
+  .topBox .info {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto; }
+  .topBox h1 {
+    color: #fff; }
+  .topBox p {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #FCFCFC;
+    width: 546px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 32px; }
+
+.content {
+  padding: 50px 0 115px; }
+
+.twoColumns {
+  margin-bottom: 38px; }
+  .twoColumns .part {
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; }
+    .twoColumns .part .date {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 16px;
+      color: #393636;
+      line-height: 20px; }
+      .twoColumns .part .date:before {
+        content: '';
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 20px;
+        position: absolute;
+        background-image: url("../images/calendar.png");
+        background-repeat: no-repeat; }
+    .twoColumns .part .galleryMarker {
+      padding-left: 28px;
+      position: relative;
+      color: #393636;
+      line-height: 20px;
+      margin-bottom: 24px; }
+      .twoColumns .part .galleryMarker:before {
+        content: '';
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 20px;
+        position: absolute;
+        background-image: url("../images/marker.png");
+        background-repeat: no-repeat; }
+    .twoColumns .part .learnMore {
+      color: #7B2F2E;
+      cursor: pointer;
+      line-height: 20px;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      position: relative;
+      padding-right: 25px; }
+      .twoColumns .part .learnMore:after {
+        content: '';
+        -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -moz-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+        -o-transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        right: 0;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        border-right: 1px solid #612524;
+        border-bottom: 1px solid #612524; }
+      .twoColumns .part .learnMore.opened:after {
+        -webkit-transform: translate(-50%, -50%) rotate(225deg);
+        -moz-transform: translate(-50%, -50%) rotate(225deg);
+        -ms-transform: translate(-50%, -50%) rotate(225deg);
+        -o-transform: translate(-50%, -50%) rotate(225deg);
+        transform: translate(-50%, -50%) rotate(225deg);
+        top: 14px; }
+
+.acf-map {
+  height: 300px; }
 
 @media screen and (max-width: 1024px) {
   html {

@@ -1,4 +1,7 @@
 $ = jQuery;
+
+
+
 $(document).ready(function () {
     var width = document.body.clientWidth;
 
@@ -58,6 +61,21 @@ $(document).ready(function () {
         if ($this.html().replace(/\s|&nbsp;/g, '').length == 0)
             $this.remove();
     });
+
+    var acc = $('.right .learnMore');
+    acc.click(function() {
+        if($(this).hasClass('opened')){
+            acc.removeClass('opened').text('Докладніше');
+            $('.right .fullInfo').stop().slideUp();
+        }
+        else {
+            $('.right .fullInfo').stop().slideUp();
+            $(this).prev().stop().slideDown(500);
+            acc.removeClass('opened');
+            $(this).addClass('opened').text('Повернути');
+        }
+    });
+
 
 });
 
