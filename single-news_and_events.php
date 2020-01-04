@@ -18,11 +18,8 @@ $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
                 <div class="left part">
                     <h2>Час і місце</h2>
                     <div class="date">
-                        <?php if ($date_from = get_field('date_from')) { ?>
-                            <?= $date_from ?>
-                        <?php } ?>
-                        <?php if ($date_to = get_field('date_to')) { ?>
-                            <?= $date_to ?>
+                        <?php if ($date_s = get_field('date_s')) { ?>
+                            <?= $date_s ?>
                         <?php } ?>
                     </div>
                     <div class="galleryMarker">

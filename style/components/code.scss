@@ -468,3 +468,160 @@ header {
     }
   }
 }
+
+.post-type-archive-news_and_events {
+  h1 {
+    line-height: 66px;
+    color: #7B2F2E;
+    padding-bottom: 16px;
+    letter-spacing: 0.03em;
+    margin-bottom: 32px;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      background-color: #7B2F2E;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .content {
+    padding: 86px 0 115px;
+  }
+}
+
+.events {
+  position: relative;
+  padding-bottom: 45px;
+  .button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding-left: 50px;
+    @include transform(translateX(-50%));
+    &:before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      background: url("../images/arrow.png") no-repeat;
+      @include transition();
+    }
+    &.load {
+     &:before {
+       animation: Orbita .8s linear infinite;
+    }
+    @keyframes Orbita {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+  }
+  }
+  .event {
+    padding-bottom: 46px;
+    a.thumb {
+      display: block;
+      margin-bottom: 24px;
+    }
+    .info {
+      max-width: 592px;
+      p {
+        line-height: 20px;
+        padding-bottom: 12px;
+      }
+    }
+    .dateTitle {
+      margin-bottom: 16px;
+      .date {
+        @include flex-basis(105px);
+        margin-right: 16px;
+        position: relative;
+        &:after {
+          content: '';
+          height: 50px;
+          width: 1px;
+          right: 0;
+          top: 50%;
+          position: absolute;
+          @include transform(translateY(-50%));
+          background-color: #BDBDBD;
+        }
+        .number {
+          color: #7B2F2E;
+          font-size: 46px;
+          line-height: 24px;
+          font-weight: 700;
+          margin-right: 4px;
+          @include flex-basis(48px);
+        }
+        .day {
+          font-size: 14px;
+          line-height: 1;
+          color: #6D6464;
+        }
+        .month {
+          font-size: 18px;
+          line-height: 1;
+          color: #393636;
+        }
+        .rightDate {
+          @include flex(1);
+        }
+      }
+      h3 {
+        @include flex(1);
+        padding-right: 20px;
+        padding-bottom: 0;
+        a {
+          font-size: 24px;
+          line-height: 29px;
+          font-family: $f;
+          font-weight: 700;
+          color: #393636;
+          &:hover {
+            text-decoration: none;
+            color: $bg;
+          }
+        }
+      }
+    }
+    .shortGallery {
+      color: #393636;
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 16px;
+    }
+    a.more {
+      color: #7B2F2E;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      padding-bottom: 6px;
+      position: relative;
+      &:after {
+        content: '';
+        width: 40px;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #7B2F2E;
+        @include transition();
+      }
+      &:hover {
+        text-decoration: none;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 $ = jQuery;
 
 
-
 $(document).ready(function () {
     var width = document.body.clientWidth;
 
@@ -63,8 +62,8 @@ $(document).ready(function () {
     });
 
     var acc = $('.right .learnMore');
-    acc.click(function() {
-        if($(this).hasClass('opened')){
+    acc.click(function () {
+        if ($(this).hasClass('opened')) {
             acc.removeClass('opened').text('Докладніше');
             $('.right .fullInfo').stop().slideUp();
         }
@@ -76,14 +75,17 @@ $(document).ready(function () {
         }
     });
 
-    $('.grid').masonry({
-        columnWidth: 592,
-        gutter: 32,
-        itemSelector: '.grid-item'
-    });
+
 });
 
 $(window).on('load', function () {
+    $('.events.grid').masonry({
+        columnWidth: 592,
+        gutter: 32,
+        percentPosition: true,
+        isFitWidth: false,
+        itemSelector: '.grid-item'
+    });
     if ($(".homeSlider").length > 0) {
         var swiper = new Swiper('.homeSlider', {
             direction: 'vertical',
