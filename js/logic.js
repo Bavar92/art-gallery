@@ -84,7 +84,14 @@ $(window).on('load', function () {
         gutter: 32,
         percentPosition: true,
         isFitWidth: false,
-        itemSelector: '.grid-item'
+        itemSelector: '.events .grid-item'
+    });
+    $('.gallery.grid').masonry({
+        columnWidth: 280,
+        gutter: 31,
+        percentPosition: true,
+        isFitWidth: false,
+        itemSelector: '.gallery .grid-item'
     });
     if ($(".homeSlider").length > 0) {
         var swiper = new Swiper('.homeSlider', {

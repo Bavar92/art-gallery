@@ -5,6 +5,8 @@ require_once 'include/cpt.php';
 
 //images sizes
 add_image_size( 'free', '1920', '', true );
+add_image_size( 'gallery', '280', '', true );
+add_image_size( 'gallery_fancy', '487', '', true );
 add_image_size( 'job', '220', '220', true );
 add_image_size( 'event', '592', '320', true );
 

@@ -3598,14 +3598,14 @@ header {
     .footer .some a:hover {
       opacity: .8; }
 
-.post-type-archive-news_and_events h1 {
+.post-type-archive-news_and_events h1, .tpl-gallery h1 {
   line-height: 66px;
   color: #7B2F2E;
-  padding-bottom: 16px;
+  padding-bottom: 10px;
   letter-spacing: 0.03em;
   margin-bottom: 32px;
   position: relative; }
-  .post-type-archive-news_and_events h1:after {
+  .post-type-archive-news_and_events h1:after, .tpl-gallery h1:after {
     content: '';
     position: absolute;
     width: 100px;
@@ -3613,7 +3613,7 @@ header {
     background-color: #7B2F2E;
     bottom: 0;
     left: 0; }
-.post-type-archive-news_and_events .content {
+.post-type-archive-news_and_events .content, .tpl-gallery .content {
   padding: 86px 0 115px; }
 
 .events {
@@ -3753,6 +3753,56 @@ header {
         text-decoration: none; }
         .events .event a.more:hover:after {
           width: 100%; }
+
+.gallery .item {
+  margin-bottom: 32px;
+  display: block; }
+  .gallery .item:hover {
+    text-decoration: none; }
+  .gallery .item figure {
+    margin-bottom: 20px; }
+    .gallery .item figure img {
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+    .gallery .item figure:hover img {
+      opacity: .8; }
+  .gallery .item .text {
+    max-width: 280px; }
+  .gallery .item h4 {
+    color: #393636;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Calibri";
+    padding-bottom: 12px; }
+  .gallery .item p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #554E4E; }
+
+.fancyGallery {
+  width: 487px !important;
+  background: transparent !important;
+  position: static !important;
+  padding: 0 !important; }
+  .fancyGallery .fancybox-button {
+    opacity: 1; }
+    .fancyGallery .fancybox-button svg path {
+      fill: #fff; }
+  .fancyGallery figure {
+    margin-bottom: 20px; }
+  .fancyGallery h4 {
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    padding-bottom: 12px;
+    font-family: "Calibri"; }
+  .fancyGallery p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #FCFCFC; }
 
 @media screen and (max-width: 1024px) {
   html {
