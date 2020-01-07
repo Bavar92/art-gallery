@@ -1,3 +1,4 @@
+var current_page = 1;
 jQuery(function ($) {
     $('#true_loadmore').click(function () {
         $(this).addClass('load').text('Завантажую...');
@@ -12,14 +13,16 @@ jQuery(function ($) {
             type: 'POST',
             success: function (data) {
                 if (data) {
-                    $('#true_loadmore').removeClass('load').text('Завантажити ще').before(data);
+                    console.log(data);
+                    $('#true_loadmore').removeClass('load').text('Завантажити ще');
                     current_page++;
-                    var $items = $(data);
-                    $('.grid').append($items).masonry('appended', $items);
-                    $container = $('.grid');
-                    $(".grid").append().each(function () {
-                        $('.grid').masonry('reloadItems', $items);
+
+                    var $items = data;
+                    var $grid = $( '.grid' );
+                    $grid.append( $items ).each( function() {
+                        $grid.masonry( 'reloadItems' );
                     });
+                    $grid.masonry( 'layout' );
 
                     if (current_page == max_pages) $("#true_loadmore").remove();
                 } else {

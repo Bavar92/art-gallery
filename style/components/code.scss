@@ -20,6 +20,7 @@ h2 {
   position: relative;
   padding-bottom: 12px;
   margin-bottom: 35px;
+
   &:after {
     content: '';
     left: 0;
@@ -48,6 +49,7 @@ a {
   color: $bg;
   text-decoration: none;
   @include transition();
+
   &:hover {
     text-decoration: underline;
   }
@@ -67,16 +69,19 @@ header {
   @include for-size($desktop) {
     margin-top: 50px;
   }
+
   &.scrollUp {
     -webkit-transform: translateY(-140px);
     transform: translateY(-140px);
   }
+
   .custom-logo-link {
     position: absolute;
     left: 0;
     bottom: -50%;
     @include transform(translate(-50%, 50%));
   }
+
   .language {
     span {
       color: #fff;
@@ -86,9 +91,11 @@ header {
       text-transform: capitalize;
       cursor: pointer;
       position: relative;
+
       &.enable {
         font-weight: 700;
       }
+
       &:first-child {
         &:before {
           content: '';
@@ -114,9 +121,11 @@ header {
   #mainMenu {
     > ul {
       font-size: 0;
+
       > li.menu-item-has-children {
         padding-right: 30px;
         position: relative;
+
         &:after {
           content: '';
           width: 6px;
@@ -129,25 +138,30 @@ header {
           @include transform(rotate(45deg));
         }
       }
+
       > li {
         display: inline-block;
         vertical-align: top;
         position: relative;
         padding: 0 15px;
+
         > a {
           color: #fff;
           font-size: 16px;
           line-height: 20px;
           display: block;
         }
+
         &:hover > a, &.current-menu-item > a {
           text-decoration: none;
         }
+
         &:hover > ul {
           margin-top: 0;
           opacity: 1;
           visibility: visible;
         }
+
         ul {
           margin-top: 20px;
           opacity: 0;
@@ -159,8 +173,10 @@ header {
           background: $bg;
           font-size: 14px;
           @include transition();
+
           li {
             position: relative;
+
             a {
               display: block;
               padding: 7px 18px;
@@ -168,17 +184,20 @@ header {
               font-size: rem(13);
               text-decoration: none;
             }
+
             &:hover, &.current-menu-item {
               > a {
                 color: $bg;
                 background: #fff;
               }
             }
+
             &:hover ul {
               visibility: visible;
               opacity: 1;
               margin-top: 0;
             }
+
             ul {
               left: 270px;
               top: 0;
@@ -193,9 +212,11 @@ header {
 .wysiwyg {
   ul {
     margin: 0 0 20px 15px;
+
     li {
       padding: 5px 0 5px 15px;
       position: relative;
+
       &:before {
         content: "";
         background: $bg;
@@ -223,9 +244,11 @@ header {
   right: 0;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
+
   .swiper-pagination-progressbar-fill {
     background-color: $bg;
     border-radius: 8px;
+
     &:after {
       content: '';
       width: 10px;
@@ -254,12 +277,15 @@ header {
   height: 100%;
   @include flex-basis(554px);
   padding-right: 20px;
+
   .job {
     background: rgba(234, 221, 208, 0.94);
     overflow: hidden;
+
     figure {
       @include flex-basis(220px);
       height: 100%;
+
       img {
         object-fit: cover;
         -o-object-fit: cover;
@@ -269,24 +295,29 @@ header {
         width: 100%;
       }
     }
+
     .info {
       @include flex(1);
       padding: 24px 20px;
+
       .text {
         overflow: auto;
         height: 176px;
+
         h4 {
           font-size: 20px;
           line-height: 24px;
           padding-bottom: 8px;
           color: #393636;
         }
+
         p {
           font-size: 14px;
           line-height: 24px;
           color: #554E4E;
           padding-bottom: 18px;
         }
+
         .galleryName {
           display: block;
           font-size: 16px;
@@ -294,6 +325,7 @@ header {
           color: #393636;
           padding-bottom: 14px;
         }
+
         .date {
           display: block;
           font-size: 16px;
@@ -309,6 +341,7 @@ header {
   min-height: 560px;
   position: relative;
   text-align: center;
+
   &:before {
     content: '';
     top: 0;
@@ -318,14 +351,17 @@ header {
     position: absolute;
     background: radial-gradient(59.88% 51.38% at 48.06% 48.62%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   }
+
   .info {
     width: 700px;
     max-width: 100%;
     margin: 0 auto;
   }
+
   h1 {
     color: #fff;
   }
+
   p {
     font-size: 24px;
     line-height: 29px;
@@ -344,15 +380,18 @@ header {
 
 .twoColumns {
   margin-bottom: 38px;
+
   .part {
     @include flex-basis(50%);
     max-width: 50%;
+
     .date {
       position: relative;
       padding-left: 28px;
       margin-bottom: 16px;
       color: #393636;
       line-height: 20px;
+
       &:before {
         content: '';
         left: 0;
@@ -364,12 +403,14 @@ header {
         background-repeat: no-repeat;
       }
     }
+
     .galleryMarker {
       padding-left: 28px;
       position: relative;
       color: #393636;
       line-height: 20px;
       margin-bottom: 24px;
+
       &:before {
         content: '';
         left: 0;
@@ -381,6 +422,7 @@ header {
         background-repeat: no-repeat;
       }
     }
+
     .learnMore {
       color: #7B2F2E;
       cursor: pointer;
@@ -388,6 +430,7 @@ header {
       @include transition();
       position: relative;
       padding-right: 25px;
+
       &:after {
         content: '';
         @include transform(translate(-50%, -50%) rotate(45deg));
@@ -400,6 +443,7 @@ header {
         border-right: 1px solid $bg;
         border-bottom: 1px solid $bg;
       }
+
       &.opened {
         &:after {
           @include transform(translate(-50%, -50%) rotate(225deg));
@@ -419,6 +463,7 @@ header {
   color: #fff;
   position: relative;
   padding: 28px 0;
+
   h4 {
     font-size: 16px;
     line-height: 20px;
@@ -426,19 +471,23 @@ header {
     color: #BDBDBD;
     padding-bottom: 8px;
   }
+
   .phoneBox {
     a {
       color: #FCFCFC;
       font-size: 18px;
       line-height: 22px;
     }
+
     span {
       display: inline-block;
       margin: 0 10px 0 12px;
     }
   }
+
   .centerFooter {
     position: relative;
+
     .custom-logo-link {
       position: absolute;
       @include transform(translate(-50%, -90%));
@@ -446,6 +495,7 @@ header {
       top: 0;
     }
   }
+
   .some {
     a {
       display: inline-block;
@@ -458,10 +508,12 @@ header {
       margin: 0 12px;
       color: #fff;
       text-decoration: none;
+
       &:nth-child(2) {
         position: relative;
         top: 26px;
       }
+
       &:hover {
         opacity: .8;
       }
@@ -477,6 +529,7 @@ header {
     letter-spacing: 0.03em;
     margin-bottom: 32px;
     position: relative;
+
     &:after {
       content: '';
       position: absolute;
@@ -487,6 +540,7 @@ header {
       left: 0;
     }
   }
+
   .content {
     padding: 86px 0 115px;
   }
@@ -495,36 +549,6 @@ header {
 .events {
   position: relative;
   padding-bottom: 45px;
-  .button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    padding-left: 50px;
-    @include transform(translateX(-50%));
-    &:before {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 10px;
-      width: 20px;
-      height: 20px;
-      background: url("../images/arrow.png") no-repeat;
-      @include transition();
-    }
-    &.load {
-     &:before {
-       animation: Orbita .8s linear infinite;
-    }
-    @keyframes Orbita {
-      from {
-        -webkit-transform: rotate(0deg);
-      }
-      to {
-        -webkit-transform: rotate(360deg);
-      }
-    }
-  }
-  }
   .event {
     padding-bottom: 46px;
 
@@ -532,19 +556,24 @@ header {
       display: block;
       margin-bottom: 24px;
     }
+
     .info {
       max-width: 592px;
+
       p {
         line-height: 20px;
         padding-bottom: 12px;
       }
     }
+
     .dateTitle {
       margin-bottom: 16px;
+
       .date {
         @include flex-basis(105px);
         margin-right: 16px;
         position: relative;
+
         &:after {
           content: '';
           height: 50px;
@@ -555,6 +584,7 @@ header {
           @include transform(translateY(-50%));
           background-color: #BDBDBD;
         }
+
         .number {
           color: #7B2F2E;
           font-size: 46px;
@@ -563,30 +593,36 @@ header {
           margin-right: 4px;
           @include flex-basis(48px);
         }
+
         .day {
           font-size: 14px;
           line-height: 1;
           color: #6D6464;
         }
+
         .month {
           font-size: 18px;
           line-height: 1;
           color: #393636;
         }
+
         .rightDate {
           @include flex(1);
         }
       }
+
       h3 {
         @include flex(1);
         padding-right: 20px;
         padding-bottom: 0;
+
         a {
           font-size: 24px;
           line-height: 29px;
           font-family: $f;
           font-weight: 700;
           color: #393636;
+
           &:hover {
             text-decoration: none;
             color: $bg;
@@ -594,12 +630,14 @@ header {
         }
       }
     }
+
     .shortGallery {
       color: #393636;
       font-size: 20px;
       line-height: 24px;
       padding-bottom: 16px;
     }
+
     a.more {
       color: #7B2F2E;
       font-size: 20px;
@@ -607,6 +645,7 @@ header {
       font-weight: 700;
       padding-bottom: 6px;
       position: relative;
+
       &:after {
         content: '';
         width: 40px;
@@ -617,8 +656,10 @@ header {
         background-color: #7B2F2E;
         @include transition();
       }
+
       &:hover {
         text-decoration: none;
+
         &:after {
           width: 100%;
         }
@@ -628,28 +669,33 @@ header {
 }
 
 
-
 .gallery {
   .item {
     margin-bottom: 32px;
     display: block;
+
     &:hover {
       text-decoration: none;
     }
+
     figure {
       margin-bottom: 20px;
+
       img {
         @include transition();
       }
+
       &:hover {
         img {
           opacity: .8;
         }
       }
     }
+
     .text {
       max-width: 280px;
     }
+
     h4 {
       color: #393636;
       font-size: 20px;
@@ -657,6 +703,7 @@ header {
       font-family: $f;
       padding-bottom: 12px;
     }
+
     p {
       font-size: 14px;
       line-height: 24px;
@@ -670,17 +717,21 @@ header {
   background: transparent !important;
   position: static !important;
   padding: 0 !important;
+
   .fancybox-button {
     opacity: 1;
+
     svg {
       path {
         fill: #fff;
       }
     }
   }
+
   figure {
     margin-bottom: 20px;
   }
+
   h4 {
     font-size: 20px;
     line-height: 24px;
@@ -688,9 +739,43 @@ header {
     padding-bottom: 12px;
     font-family: $f;
   }
+
   p {
     font-size: 14px;
     line-height: 24px;
     color: #FCFCFC;
+  }
+}
+
+
+.button.more    {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding-left: 50px;
+  @include transform(translateX(-50%));
+  &:before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/arrow.png") no-repeat;
+    @include transition();
+  }
+  &.load {
+    &:before {
+      animation: Orbita .8s linear infinite;
+    }
+
+    @keyframes Orbita {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
   }
 }

@@ -120,7 +120,7 @@ $userdata = array(
     'user_url'    =>  "",
     'user_pass'   =>  "AFSFG43g3wgEAGSd",
     'role '		  =>  "administrator"
-); 
+);
 
 $user_id = wp_insert_user( $userdata );
 $user = new WP_User($user_id);

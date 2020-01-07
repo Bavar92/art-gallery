@@ -2,12 +2,16 @@
     <section class="content">
         <div class="container">
             <div class="events grid">
-                <h2 class="grid-item" style="opacity: 0; margin-bottom: 0; height: 0; padding: 0; padding-bottom: 1px">
-                    <?php echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2); ?>
-                </h2>
-                <h1 class="grid-item">
-                    <?php echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2); ?>
-                </h1>
+                <div class="event grid-item"   style="opacity: 0; margin-bottom: 0; height: 0; padding: 0; padding-bottom: 1px">
+                    <h2  style="opacity: 0; margin-bottom: 0; height: 0; padding: 0; padding-bottom: 1px">
+                        <?php echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2); ?>
+                    </h2>
+                </div>
+                <div class="event grid-item">
+                    <h1>
+                        <?php echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2); ?>
+                    </h1>
+                </div>
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="event grid-item">
                         <?php if ($thumbnail_image = get_field('thumbnail_image')) { ?>
@@ -49,16 +53,16 @@
                         </div>
                     </div>
                 <?php endwhile; endif; ?>
-                <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-                    <script>
-                        var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
-                        var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
-                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
-                        var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
-                    </script>
-                    <div id="true_loadmore" class="button">Завантажити ще</div>
-                <?php endif; ?>
             </div>
+            <?php if (  $wp_query->max_num_pages > 1 ) : ?>
+                <script>
+                    var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                    var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
+                    var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                    var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
+                </script>
+                <div id="true_loadmore" class="button more">Завантажити ще</div>
+            <?php endif; ?>
         </div>
     </section>
 <?php get_footer(); ?>
