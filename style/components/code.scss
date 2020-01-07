@@ -521,7 +521,7 @@ header {
   }
 }
 
-.post-type-archive-news_and_events, .tpl-gallery {
+.post-type-archive-news_and_events, .tpl-contacts, .tpl-gallery {
   h1 {
     line-height: 66px;
     color: #7B2F2E;
@@ -775,6 +775,45 @@ header {
       }
       to {
         -webkit-transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.contacts {
+  .contact {
+    @include flex-basis(48.7%);
+    h2 {
+      font-size: 60px;
+      line-height: 30px;
+      color: #7B2F2E;
+      letter-spacing: 0.03em;
+      font-family: $f2;
+      font-weight: 400;
+      padding-bottom: 32px;
+      margin-bottom: 0;
+      &:after {
+        display: none;
+      }
+    }
+    h3 {
+      font-size: 41px;
+      line-height: 45px;
+      color: #393636;
+      letter-spacing: 0.04em;
+      padding-bottom: 16px;
+    }
+    .wpcf7 {
+      margin: -30px 32px 0;
+      background-color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 24px 24px 20px;
+      position: relative;
+      .button {
+        position: absolute;
+        left: 24px;
+        bottom: -40px;
+        @include transform(translateY(-50%));
       }
     }
   }

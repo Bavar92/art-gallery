@@ -4608,7 +4608,7 @@ header .language span:first-child:before {
   opacity: 0.8;
 }
 
-.post-type-archive-news_and_events h1, .tpl-gallery h1 {
+.post-type-archive-news_and_events h1, .tpl-contacts h1, .tpl-gallery h1 {
   line-height: 66px;
   color: #7B2F2E;
   padding-bottom: 10px;
@@ -4616,7 +4616,7 @@ header .language span:first-child:before {
   margin-bottom: 32px;
   position: relative;
 }
-.post-type-archive-news_and_events h1:after, .tpl-gallery h1:after {
+.post-type-archive-news_and_events h1:after, .tpl-contacts h1:after, .tpl-gallery h1:after {
   content: "";
   position: absolute;
   width: 100px;
@@ -4625,7 +4625,7 @@ header .language span:first-child:before {
   bottom: 0;
   left: 0;
 }
-.post-type-archive-news_and_events .content, .tpl-gallery .content {
+.post-type-archive-news_and_events .content, .tpl-contacts .content, .tpl-gallery .content {
   padding: 86px 0 115px;
 }
 
@@ -4856,6 +4856,50 @@ header .language span:first-child:before {
   to {
     -webkit-transform: rotate(360deg);
   }
+}
+
+.contacts .contact {
+  -webkit-flex-basis: 48.7%;
+  -moz-flex-basis: 48.7%;
+  -ms-flex-preferred-size: 48.7%;
+  flex-basis: 48.7%;
+}
+.contacts .contact h2 {
+  font-size: 60px;
+  line-height: 30px;
+  color: #7B2F2E;
+  letter-spacing: 0.03em;
+  font-family: "HeroldC";
+  font-weight: 400;
+  padding-bottom: 32px;
+  margin-bottom: 0;
+}
+.contacts .contact h2:after {
+  display: none;
+}
+.contacts .contact h3 {
+  font-size: 41px;
+  line-height: 45px;
+  color: #393636;
+  letter-spacing: 0.04em;
+  padding-bottom: 16px;
+}
+.contacts .contact .wpcf7 {
+  margin: -30px 32px 0;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 24px 24px 20px;
+  position: relative;
+}
+.contacts .contact .wpcf7 .button {
+  position: absolute;
+  left: 24px;
+  bottom: -40px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media screen and (max-width: 1024px) {
