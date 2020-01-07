@@ -10,7 +10,7 @@ jQuery(function ($) {
         $.ajax({
             url: ajaxurl,
             data: data,
-            type: 'POST',
+            type: 'GET',
             success: function (data) {
                 if (data) {
                     console.log(data);
