@@ -45,7 +45,7 @@ add_shortcode("social", "some");
 add_theme_support('custom-logo');
 
 function true_loadmore_scripts() {
-    wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
+    wp_enqueue_script('jquery');
     wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
 }
 
@@ -62,7 +62,7 @@ function true_load_posts(){
 
     if( have_posts() ) :
 
-        while( have_posts() ): the_post(); ?>
+        while( have_posts() ) : the_post() ?>
 
             <div class="event grid-item">
                 <?php if ($thumbnail_image = get_field('thumbnail_image')) { ?>

@@ -86,6 +86,7 @@ $(window).on('load', function () {
         isFitWidth: false,
         itemSelector: '.events .grid-item'
     });
+    
     $('.gallery.grid').masonry({
         columnWidth: 280,
         gutter: 31,

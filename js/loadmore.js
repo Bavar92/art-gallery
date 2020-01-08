@@ -10,10 +10,9 @@ jQuery(function ($) {
         $.ajax({
             url: ajaxurl,
             data: data,
-            type: 'GET',
+            type: 'POST',
             success: function (data) {
                 if (data) {
-                    console.log(data);
                     $('#true_loadmore').removeClass('load').text('Завантажити ще');
                     current_page++;
 

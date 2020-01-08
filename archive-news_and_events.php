@@ -7,7 +7,7 @@
                         <?php echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2); ?>
                     </h2>
                 </div>
-                <div class="event grid-item">
+                <div class="event grid-item" style="padding-bottom: 0;">
                     <h1>
                         <?php echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2); ?>
                     </h1>

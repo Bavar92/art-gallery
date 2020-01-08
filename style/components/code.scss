@@ -211,20 +211,20 @@ header {
 
 .wysiwyg {
   ul {
-    margin: 0 0 20px 15px;
+    margin: 0 0 20px 0;
 
     li {
-      padding: 5px 0 5px 15px;
+      padding-left: 15px;
       position: relative;
-
+      line-height: 26px;
       &:before {
         content: "";
         background: $bg;
-        width: 4px;
-        height: 4px;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
         position: absolute;
-        top: rem(15);
+        top: rem(10);
         left: 0;
       }
     }
@@ -549,125 +549,126 @@ header {
 .events {
   position: relative;
   padding-bottom: 45px;
-  .event {
-    padding-bottom: 46px;
 
-    a.thumb {
-      display: block;
-      margin-bottom: 24px;
+}
+
+
+.event {
+  padding-bottom: 46px;
+  a.thumb {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .info {
+    max-width: 592px;
+
+    p {
+      line-height: 20px;
+      padding-bottom: 12px;
     }
+  }
 
-    .info {
-      max-width: 592px;
+  .dateTitle {
+    margin-bottom: 16px;
 
-      p {
-        line-height: 20px;
-        padding-bottom: 12px;
-      }
-    }
-
-    .dateTitle {
-      margin-bottom: 16px;
-
-      .date {
-        @include flex-basis(105px);
-        margin-right: 16px;
-        position: relative;
-
-        &:after {
-          content: '';
-          height: 50px;
-          width: 1px;
-          right: 0;
-          top: 50%;
-          position: absolute;
-          @include transform(translateY(-50%));
-          background-color: #BDBDBD;
-        }
-
-        .number {
-          color: #7B2F2E;
-          font-size: 46px;
-          line-height: 24px;
-          font-weight: 700;
-          margin-right: 4px;
-          @include flex-basis(48px);
-        }
-
-        .day {
-          font-size: 14px;
-          line-height: 1;
-          color: #6D6464;
-        }
-
-        .month {
-          font-size: 18px;
-          line-height: 1;
-          color: #393636;
-        }
-
-        .rightDate {
-          @include flex(1);
-        }
-      }
-
-      h3 {
-        @include flex(1);
-        padding-right: 20px;
-        padding-bottom: 0;
-
-        a {
-          font-size: 24px;
-          line-height: 29px;
-          font-family: $f;
-          font-weight: 700;
-          color: #393636;
-
-          &:hover {
-            text-decoration: none;
-            color: $bg;
-          }
-        }
-      }
-    }
-
-    .shortGallery {
-      color: #393636;
-      font-size: 20px;
-      line-height: 24px;
-      padding-bottom: 16px;
-    }
-
-    a.more {
-      color: #7B2F2E;
-      font-size: 20px;
-      line-height: 24px;
-      font-weight: 700;
-      padding-bottom: 6px;
+    .date {
+      @include flex-basis(105px);
+      margin-right: 16px;
       position: relative;
 
       &:after {
         content: '';
-        width: 40px;
-        height: 1px;
+        height: 50px;
+        width: 1px;
+        right: 0;
+        top: 50%;
         position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: #7B2F2E;
-        @include transition();
+        @include transform(translateY(-50%));
+        background-color: #BDBDBD;
       }
 
-      &:hover {
-        text-decoration: none;
+      .number {
+        color: #7B2F2E;
+        font-size: 46px;
+        line-height: 24px;
+        font-weight: 700;
+        margin-right: 4px;
+        @include flex-basis(48px);
+      }
 
-        &:after {
-          width: 100%;
+      .day {
+        font-size: 14px;
+        line-height: 1;
+        color: #6D6464;
+      }
+
+      .month {
+        font-size: 18px;
+        line-height: 1;
+        color: #393636;
+      }
+
+      .rightDate {
+        @include flex(1);
+      }
+    }
+
+    h3 {
+      @include flex(1);
+      padding-right: 20px;
+      padding-bottom: 0;
+
+      a {
+        font-size: 24px;
+        line-height: 29px;
+        font-family: $f;
+        font-weight: 700;
+        color: #393636;
+
+        &:hover {
+          text-decoration: none;
+          color: $bg;
         }
       }
     }
   }
-}
 
+  .shortGallery {
+    color: #393636;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 16px;
+  }
+
+  a.more {
+    color: #7B2F2E;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    padding-bottom: 6px;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #7B2F2E;
+      @include transition();
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
 
 .gallery {
   .item {
@@ -747,8 +748,7 @@ header {
   }
 }
 
-
-.button.more    {
+.button.more {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -816,5 +816,74 @@ header {
         @include transform(translateY(-50%));
       }
     }
+  }
+}
+
+.programs {
+  .event {
+    padding-bottom: 0;
+  }
+  .item {
+    padding-bottom: 60px;
+    .titleBox {
+      @include flex-basis(383px);
+      margin-right: 32px;
+      h2 {
+        font-size: 60px;
+        letter-spacing: 0.03em;
+        font-family:  $f2;
+        font-weight: 400;
+        line-height: 66px;
+        margin-bottom: 16px;
+      }
+      h3 {
+        color: #393636;
+        font-size: 41px;
+        letter-spacing: 0.04em;
+      }
+    }
+    .infoBox {
+      @include flex(1);
+      .eventsPro {
+        @include boxGrid(2, 2%);
+      }
+      .part {
+        padding-bottom: 20px;
+        @include flex-basis(48%);
+        h4 {
+          font-family: $f;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 29px;
+          padding-bottom: 16px;
+        }
+      }
+      p {
+        color: #393636;
+        padding-bottom: 12px;
+      }
+      .list {
+        ol {
+          list-style: none;
+          li {
+            line-height: 30px;
+            position: relative;
+            padding: 0 0 0 26px;
+            &:before {
+              content: url("../images/file.png");
+              position: absolute;
+              left: 0;
+              top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tpl-educational-programs {
+  .content {
+    padding: 80px 0 50px;
   }
 }

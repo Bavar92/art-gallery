@@ -144,6 +144,10 @@ article, aside, details, figcaption, figure, footer, header, nav, section, summa
   margin: 0 0 20px;
 }
 
+.btnCenter {
+  text-align: center;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -4300,20 +4304,21 @@ header .language span:first-child:before {
   }
 }
 .wysiwyg ul {
-  margin: 0 0 20px 15px;
+  margin: 0 0 20px 0;
 }
 .wysiwyg ul li {
-  padding: 5px 0 5px 15px;
+  padding-left: 15px;
   position: relative;
+  line-height: 26px;
 }
 .wysiwyg ul li:before {
   content: "";
   background: #612524;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   position: absolute;
-  top: 0.9375rem;
+  top: 0.625rem;
   left: 0;
 }
 
@@ -4633,24 +4638,25 @@ header .language span:first-child:before {
   position: relative;
   padding-bottom: 45px;
 }
-.events .event {
+
+.event {
   padding-bottom: 46px;
 }
-.events .event a.thumb {
+.event a.thumb {
   display: block;
   margin-bottom: 24px;
 }
-.events .event .info {
+.event .info {
   max-width: 592px;
 }
-.events .event .info p {
+.event .info p {
   line-height: 20px;
   padding-bottom: 12px;
 }
-.events .event .dateTitle {
+.event .dateTitle {
   margin-bottom: 16px;
 }
-.events .event .dateTitle .date {
+.event .dateTitle .date {
   -webkit-flex-basis: 105px;
   -moz-flex-basis: 105px;
   -ms-flex-preferred-size: 105px;
@@ -4658,7 +4664,7 @@ header .language span:first-child:before {
   margin-right: 16px;
   position: relative;
 }
-.events .event .dateTitle .date:after {
+.event .dateTitle .date:after {
   content: "";
   height: 50px;
   width: 1px;
@@ -4672,7 +4678,7 @@ header .language span:first-child:before {
   transform: translateY(-50%);
   background-color: #BDBDBD;
 }
-.events .event .dateTitle .date .number {
+.event .dateTitle .date .number {
   color: #7B2F2E;
   font-size: 46px;
   line-height: 24px;
@@ -4683,17 +4689,17 @@ header .language span:first-child:before {
   -ms-flex-preferred-size: 48px;
   flex-basis: 48px;
 }
-.events .event .dateTitle .date .day {
+.event .dateTitle .date .day {
   font-size: 14px;
   line-height: 1;
   color: #6D6464;
 }
-.events .event .dateTitle .date .month {
+.event .dateTitle .date .month {
   font-size: 18px;
   line-height: 1;
   color: #393636;
 }
-.events .event .dateTitle .date .rightDate {
+.event .dateTitle .date .rightDate {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
@@ -4701,7 +4707,7 @@ header .language span:first-child:before {
   -ms-flex: 1;
   flex: 1;
 }
-.events .event .dateTitle h3 {
+.event .dateTitle h3 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
@@ -4711,24 +4717,24 @@ header .language span:first-child:before {
   padding-right: 20px;
   padding-bottom: 0;
 }
-.events .event .dateTitle h3 a {
+.event .dateTitle h3 a {
   font-size: 24px;
   line-height: 29px;
   font-family: "Calibri";
   font-weight: 700;
   color: #393636;
 }
-.events .event .dateTitle h3 a:hover {
+.event .dateTitle h3 a:hover {
   text-decoration: none;
   color: #612524;
 }
-.events .event .shortGallery {
+.event .shortGallery {
   color: #393636;
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 16px;
 }
-.events .event a.more {
+.event a.more {
   color: #7B2F2E;
   font-size: 20px;
   line-height: 24px;
@@ -4736,7 +4742,7 @@ header .language span:first-child:before {
   padding-bottom: 6px;
   position: relative;
 }
-.events .event a.more:after {
+.event a.more:after {
   content: "";
   width: 40px;
   height: 1px;
@@ -4750,10 +4756,10 @@ header .language span:first-child:before {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.events .event a.more:hover {
+.event a.more:hover {
   text-decoration: none;
 }
-.events .event a.more:hover:after {
+.event a.more:hover:after {
   width: 100%;
 }
 
@@ -4900,6 +4906,108 @@ header .language span:first-child:before {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.programs .event {
+  padding-bottom: 0;
+}
+.programs .item {
+  padding-bottom: 60px;
+}
+.programs .item .titleBox {
+  -webkit-flex-basis: 383px;
+  -moz-flex-basis: 383px;
+  -ms-flex-preferred-size: 383px;
+  flex-basis: 383px;
+  margin-right: 32px;
+}
+.programs .item .titleBox h2 {
+  font-size: 60px;
+  letter-spacing: 0.03em;
+  font-family: "HeroldC";
+  font-weight: 400;
+  line-height: 66px;
+  margin-bottom: 16px;
+}
+.programs .item .titleBox h3 {
+  color: #393636;
+  font-size: 41px;
+  letter-spacing: 0.04em;
+}
+.programs .item .infoBox {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.programs .item .infoBox .eventsPro {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-flow: wrap;
+  -moz-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -1%;
+  width: 102%;
+}
+.programs .item .infoBox .eventsPro > * {
+  width: 48%;
+  margin: 0 1% 1.5em;
+}
+.programs .item .infoBox .part {
+  padding-bottom: 20px;
+  -webkit-flex-basis: 48%;
+  -moz-flex-basis: 48%;
+  -ms-flex-preferred-size: 48%;
+  flex-basis: 48%;
+}
+.programs .item .infoBox .part h4 {
+  font-family: "Calibri";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  padding-bottom: 16px;
+}
+.programs .item .infoBox p {
+  color: #393636;
+  padding-bottom: 12px;
+}
+.programs .item .infoBox .list ol {
+  list-style: none;
+}
+.programs .item .infoBox .list ol li {
+  line-height: 30px;
+  position: relative;
+  padding: 0 0 0 26px;
+}
+.programs .item .infoBox .list ol li:before {
+  content: url("../images/file.png");
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.tpl-educational-programs .content {
+  padding: 80px 0 50px;
 }
 
 @media screen and (max-width: 1024px) {
