@@ -23,7 +23,7 @@ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                     </div>
                 <?php } ?>
             </div>
-            <div class="swiper-pagination"><div></div></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 <?php } ?>

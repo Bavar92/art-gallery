@@ -68,6 +68,7 @@ header {
   @include transition();
   @include for-size($desktop) {
     margin-top: 50px;
+    position: static;
   }
 
   &.scrollUp {
@@ -79,12 +80,23 @@ header {
     position: absolute;
     left: 0;
     bottom: -50%;
+    z-index: 1;
     @include transform(translate(-50%, 50%));
+    @include for-size(1350px) {
+      @include transform(translate(0, 50%));
+    }
+  }
+
+  #mainMenu {
+    @include for-size(1350px) {
+      margin-left: 90px;
+    }
   }
 
   .language {
-    span {
+    a {
       color: #fff;
+      display: inline-block;
       font-size: 16px;
       line-height: 20px;
       padding: 0 9px;
@@ -92,7 +104,7 @@ header {
       cursor: pointer;
       position: relative;
 
-      &.enable {
+      &.active {
         font-weight: 700;
       }
 
@@ -115,6 +127,9 @@ header {
 
 #pusher {
   margin-top: 65px;
+  @include for-size($desktop) {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -217,6 +232,7 @@ header {
       padding-left: 15px;
       position: relative;
       line-height: 26px;
+
       &:before {
         content: "";
         background: $bg;
@@ -248,20 +264,6 @@ header {
   .swiper-pagination-progressbar-fill {
     background-color: $bg;
     border-radius: 8px;
-
-    &:after {
-      content: '';
-      width: 10px;
-      height: 10px;
-      bottom: 0;
-      left: 50%;
-      position: absolute;
-      @include transform(translateX(-50%) scale(1));
-      border-radius: 50%;
-      border: 5px solid $bg;
-      background-color: #fff;
-      box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-    }
   }
 }
 
@@ -341,7 +343,13 @@ header {
   min-height: 560px;
   position: relative;
   text-align: center;
-
+  padding: 50px 0 40px;
+  @include for-size($desktop) {
+    min-height: 400px;
+  }
+  @include for-size($table) {
+    min-height: inherit;
+  }
   &:before {
     content: '';
     top: 0;
@@ -360,6 +368,14 @@ header {
 
   h1 {
     color: #fff;
+    @include for-size($desktop) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    @include for-size($table) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   p {
@@ -371,20 +387,39 @@ header {
     max-width: 100%;
     margin: 0 auto;
     padding-bottom: 32px;
+    @include for-size($desktop) {
+      font-size: 22px;
+    }
+    @include for-size($table) {
+      font-size: 20px;
+    }
   }
 }
 
 .content {
   padding: 50px 0 115px;
+  @include for-size($table) {
+    padding: 30px 0 70px;
+  }
+  @include for-size(550px) {
+    padding: 30px 0;
+  }
 }
 
 .twoColumns {
   margin-bottom: 38px;
-
+  @include for-size($table) {
+    display: block;
+  }
+  .left {
+    margin-bottom: 30px;
+  }
   .part {
     @include flex-basis(50%);
     max-width: 50%;
-
+    @include for-size(550px) {
+      max-width: 100%;
+    }
     .date {
       position: relative;
       padding-left: 28px;
@@ -463,6 +498,14 @@ header {
   color: #fff;
   position: relative;
   padding: 28px 0;
+  max-width: 100%;
+
+  > .alc {
+    @include for-size(550px) {
+      display: block;
+      text-align: center;
+    }
+  }
 
   h4 {
     font-size: 16px;
@@ -473,10 +516,17 @@ header {
   }
 
   .phoneBox {
+    @include for-size(550px) {
+      padding-bottom: 20px;
+    }
+
     a {
       color: #FCFCFC;
       font-size: 18px;
       line-height: 22px;
+      @include for-size(550px) {
+        font-size: 16px;
+      }
     }
 
     span {
@@ -493,10 +543,22 @@ header {
       @include transform(translate(-50%, -90%));
       left: 50%;
       top: 0;
+      @include for-size(550px) {
+        display: block;
+        position: static;
+        @include transform(translate(0, 0));
+        img {
+          margin: 0 auto 20px;
+        }
+      }
     }
   }
 
   .some {
+    @include for-size(550px) {
+      padding-bottom: 20px;
+    }
+
     a {
       display: inline-block;
       width: 36px;
@@ -508,10 +570,16 @@ header {
       margin: 0 12px;
       color: #fff;
       text-decoration: none;
+      @include for-size(550px) {
+        margin: 0 6px;
+      }
 
       &:nth-child(2) {
         position: relative;
         top: 26px;
+        @include for-size(550px) {
+          top: 0;
+        }
       }
 
       &:hover {
@@ -543,6 +611,12 @@ header {
 
   .content {
     padding: 86px 0 115px;
+    @include for-size($desktop) {
+      padding: 60px 0 100px;
+    }
+    @include for-size(550px) {
+      padding: 60px 0 20px;
+    }
   }
 }
 
@@ -555,6 +629,7 @@ header {
 
 .event {
   padding-bottom: 46px;
+
   a.thumb {
     display: block;
     margin-bottom: 24px;
@@ -571,11 +646,18 @@ header {
 
   .dateTitle {
     margin-bottom: 16px;
+    @include for-size(550px) {
+      display: block;
+    }
 
     .date {
       @include flex-basis(105px);
       margin-right: 16px;
       position: relative;
+      @include for-size(550px) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
 
       &:after {
         content: '';
@@ -586,6 +668,9 @@ header {
         position: absolute;
         @include transform(translateY(-50%));
         background-color: #BDBDBD;
+        @include for-size(550px) {
+          display: none;
+        }
       }
 
       .number {
@@ -625,6 +710,10 @@ header {
         font-family: $f;
         font-weight: 700;
         color: #393636;
+        @include for-size(550px) {
+          font-size: 20px;
+          line-height: 20px;
+        }
 
         &:hover {
           text-decoration: none;
@@ -754,6 +843,7 @@ header {
   left: 50%;
   padding-left: 50px;
   @include transform(translateX(-50%));
+
   &:before {
     content: '';
     position: absolute;
@@ -764,6 +854,7 @@ header {
     background: url("../images/arrow.png") no-repeat;
     @include transition();
   }
+
   &.load {
     &:before {
       animation: Orbita .8s linear infinite;
@@ -781,8 +872,25 @@ header {
 }
 
 .contacts {
+  @include for-size($table) {
+    display: block;
+    text-align: center;
+  }
+
+  figure {
+    img {
+      @include for-size($table) {
+        margin: 0 auto;
+      }
+    }
+  }
+
   .contact {
     @include flex-basis(48.7%);
+    @include for-size($table) {
+      margin-bottom: 50px;
+    }
+
     h2 {
       font-size: 60px;
       line-height: 30px;
@@ -792,28 +900,49 @@ header {
       font-weight: 400;
       padding-bottom: 32px;
       margin-bottom: 0;
+      @include for-size($table) {
+        font-size: 40px;
+        line-height: 30px;
+        padding-bottom: 15px;
+      }
+
       &:after {
         display: none;
       }
     }
+
     h3 {
       font-size: 41px;
       line-height: 45px;
       color: #393636;
       letter-spacing: 0.04em;
       padding-bottom: 16px;
+      @include for-size($table) {
+        font-size: 30px;
+        line-height: 25px;
+      }
     }
+
     .wpcf7 {
       margin: -30px 32px 0;
       background-color: #fff;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       padding: 24px 24px 20px;
       position: relative;
+      @include for-size(550px) {
+        padding: 15px 15px 5px;
+        margin: -15px 15px 0;
+      }
+
       .button {
         position: absolute;
         left: 24px;
         bottom: -40px;
         @include transform(translateY(-50%));
+        @include for-size($table) {
+          @include transform(translate(-50%, -50%));
+          left: 50%;
+        }
       }
     }
   }
@@ -823,33 +952,60 @@ header {
   .event {
     padding-bottom: 0;
   }
+
   .item {
     padding-bottom: 60px;
+    @include for-size($desktop) {
+      display: block;
+    }
+    @include for-size($table) {
+      padding-bottom: 30px;
+    }
+
     .titleBox {
       @include flex-basis(383px);
       margin-right: 32px;
+      @include for-size($desktop) {
+        margin-right: 0;
+      }
+
       h2 {
         font-size: 60px;
         letter-spacing: 0.03em;
-        font-family:  $f2;
+        font-family: $f2;
         font-weight: 400;
         line-height: 66px;
         margin-bottom: 16px;
+        @include for-size($desktop) {
+          font-size: 50px;
+          line-height: 50px;
+        }
       }
+
       h3 {
         color: #393636;
         font-size: 41px;
         letter-spacing: 0.04em;
       }
     }
+
     .infoBox {
       @include flex(1);
+
       .eventsPro {
         @include boxGrid(2, 2%);
+        @include for-size($table) {
+          @include boxGrid(1, 2%);
+        }
       }
+
       .part {
         padding-bottom: 20px;
         @include flex-basis(48%);
+        @include for-size($table) {
+          @include flex-basis(100%);
+        }
+
         h4 {
           font-family: $f;
           font-weight: 700;
@@ -858,17 +1014,21 @@ header {
           padding-bottom: 16px;
         }
       }
+
       p {
         color: #393636;
         padding-bottom: 12px;
       }
+
       .list {
         ol {
           list-style: none;
+
           li {
             line-height: 30px;
             position: relative;
             padding: 0 0 0 26px;
+
             &:before {
               content: url("../images/file.png");
               position: absolute;
@@ -885,5 +1045,212 @@ header {
 .tpl-educational-programs {
   .content {
     padding: 80px 0 50px;
+    @include for-size($table) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.topSection {
+  width: 1366px;
+  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: -30px;
+  position: relative;
+  z-index: 1;
+  @include for-size($desktop) {
+    margin-bottom: 40px;
+    @include align-items(flex-start);
+  }
+  @include for-size($table) {
+    display: block;
+  }
+
+  .left {
+    @include flex(1);
+    padding: 40px 0 30px 3%;
+    @include for-size($desktop) {
+      @include flex-basis(50%);
+    }
+    @include for-size($table) {
+      padding: 50px 3% 20px;
+    }
+
+    .text {
+      margin-left: auto;
+      width: 488px;
+      padding-right: 3%;
+      @include for-size($table) {
+        margin-left: 0;
+        padding-right: 0;
+      }
+
+      h2 {
+        color: #393636;
+        font-size: 60px;
+        letter-spacing: 0.03em;
+        font-family: $f2;
+        font-weight: 400;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+        @include for-size(1280px) {
+          font-size: 50px;
+        }
+        @include for-size($desktop) {
+          line-height: 1;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        }
+      }
+
+      h3 {
+        color: #393636;
+        font-size: 41px;
+        letter-spacing: 0.04em;
+        @include for-size($desktop) {
+          line-height: 1;
+          padding-bottom: 10px;
+          font-size: 36px;
+        }
+      }
+
+      a {
+        color: #6D6464;
+      }
+
+      .icon {
+        position: relative;
+        color: #6D6464;
+        padding-left: 30px;
+        margin-bottom: 10px;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 5px;
+        }
+
+        &.address {
+          &:before {
+            content: url("../images/marker.png");
+          }
+        }
+
+        &.phone {
+          &:before {
+            content: url("../images/phone.png");
+          }
+        }
+
+        &.mail {
+          &:before {
+            content: url("../images/mail.png");
+          }
+        }
+      }
+    }
+  }
+
+  .imgRight {
+    @include flex-basis(773px);
+    @include for-size(1280px) {
+      @include flex-basis(600px);
+    }
+    @include for-size($desktop) {
+      @include flex-basis(50%);
+    }
+
+    figure {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.customTitle {
+  h3 {
+    color: #7B2F2E;
+    font-size: 30px;
+    font-family: $f;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+
+    &:after {
+      content: '';
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100px;
+      position: absolute;
+      background-color: #7B2F2E;
+    }
+  }
+}
+
+.middleSection {
+  padding-bottom: 70px;
+
+  > .alc {
+    @include for-size($table) {
+      display: block;
+    }
+  }
+
+  .imgLeft {
+    @include flex-basis(592px);
+    max-width: 592px;
+    margin-right: 32px;
+    @include for-size($desktop) {
+      @include flex-basis(355px);
+    }
+    @include for-size($table) {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+
+    figure {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .text {
+    @include flex(1);
+
+    td {
+      @include for-size($desktop) {
+        width: 50% !important;
+      }
+      @include for-size(380px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.bottomSection {
+  padding-bottom: 80px;
+  @include for-size($desktop) {
+    padding-bottom: 30px;
+  }
+
+  .priceBox {
+    @include boxGrid(3, 2%);
+    @include for-size($desktop) {
+      @include boxGrid(2, 2%);
+    }
+    @include for-size($table) {
+      @include boxGrid(1, 1%);
+    }
+
+    p {
+      padding-bottom: 10px;
+    }
+  }
+
+  h3 {
+    @include for-size($table) {
+      font-size: 24px;
+    }
   }
 }

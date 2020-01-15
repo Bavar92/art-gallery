@@ -62,17 +62,17 @@
                         <h2><?php the_field('title_educational') ?></h2>
                     </div>
                     <div class="infoBox flex">
-                        <?php if($left_text_e = get_field('left_text_e')) { ?>
+                        <?php if ($left_text_e = get_field('left_text_e')) { ?>
                             <div class="left part">
-                              <?= $left_text_e ?>
+                                <?= $left_text_e ?>
                             </div>
                         <?php } ?>
-                        <?php if($right_text_e = get_field('right_text_e')) { ?>
+                        <?php if ($right_text_e = get_field('right_text_e')) { ?>
                             <div class="right part">
                                 <?= $right_text_e ?>
                             </div>
                         <?php } ?>
-                        <?php if($bottom_text_e = get_field('bottom_text_e')) { ?>
+                        <?php if ($bottom_text_e = get_field('bottom_text_e')) { ?>
                             <div class="bottom">
                                 <?= $bottom_text_e ?>
                             </div>
@@ -84,7 +84,7 @@
                         <h2><?php the_field('title_publications') ?></h2>
                     </div>
                     <div class="infoBox">
-                        <?php if($list_p = get_field('list_p')) { ?>
+                        <?php if ($list_p = get_field('list_p')) { ?>
                             <div class="list">
                                 <?= $list_p ?>
                             </div>
@@ -92,7 +92,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 <?php get_footer(); ?>

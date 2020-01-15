@@ -74,8 +74,17 @@ $(document).ready(function () {
             $(this).addClass('opened').text('Повернути');
         }
     });
-
-
+    // var langue = $('.language a');
+    // langue.click(function () {
+    //     if ($(this).hasClass('active')) {
+    //         langue.removeClass('active');
+    //     }
+    //     else {
+    //         langue.removeClass('active');
+    //         $(this).addClass('active');
+    //     }
+    // });
+    // langue.eq(1).click();
 });
 
 $(window).on('load', function () {
@@ -103,7 +112,6 @@ $(window).on('load', function () {
             pagination: {
                 el: '.swiper-pagination',
                 type: 'progressbar',
-
                 clickable: true
             }
         });

@@ -27,8 +27,10 @@ header('X-UA-Compatible: IE=Edge');
                 <?php wp_nav_menu(array('container' => false, 'items_wrap' => '<ul id="%1$s">%3$s</ul>', 'theme_location' => 'main_menu')); ?>
             </nav>
             <div class="language">
-                <span class="ua enable">укр</span>
-                <span class="ru">Eng</span>
+                <?php echo do_shortcode('[gtranslate]'); ?>
+
+                <!--<span class="ua enable">укр</span>
+                <span class="ru">Eng</span>-->
             </div>
         </div>
     </header>

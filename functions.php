@@ -10,6 +10,8 @@ add_image_size( 'gallery_fancy', '487', '', true );
 add_image_size( 'job', '220', '220', true );
 add_image_size( 'event', '592', '320', true );
 add_image_size( 'contact', '592', '352', true );
+add_image_size( 'right_image', '773', '460', true );
+add_image_size( 'left_image', '622', '412', true );
 
 //light function fo wp_get_attachment_image_src()
 function image_src($id, $size = 'full', $background_image = false, $height = false) {
