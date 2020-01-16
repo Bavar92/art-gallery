@@ -113,7 +113,22 @@ $(window).on('load', function () {
                 el: '.swiper-pagination',
                 type: 'progressbar',
                 clickable: true
-            }
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 5
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                1500: {
+                    slidesPerView: 3,
+                    spaceBetween: 23
+                },
+            },
+
         });
     }
 });
