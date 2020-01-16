@@ -180,11 +180,7 @@ function my_theme_register_required_plugins()
             'slug' => 'wp-migrate-db',
             'required' => false,
         ),
-        array(
-            'name' => 'Wp-scss',
-            'slug' => 'wp-scss',
-            'required' => true,
-        ),
+
         array(
             'name' => 'Yoast SEO',
             'slug' => 'wordpress-seo',
